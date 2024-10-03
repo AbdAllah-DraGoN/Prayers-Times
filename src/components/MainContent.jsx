@@ -135,18 +135,12 @@ export default function MainContent() {
 
     const durationRemainingTime = moment.duration(remainingTime);
     setRemainingTimeCounter(
-      moment(
-        `${durationRemainingTime.hours()}:${durationRemainingTime.minutes()}:${durationRemainingTime.seconds()}`,
-        "hh:mm:ss"
-      ).format("hh:mm:ss")
+      `${durationRemainingTime.hours()}:${moment(
+        `${durationRemainingTime.minutes()}:${durationRemainingTime.seconds()}`,
+        "mm:ss"
+      ).format("mm:ss")}
+      `
     );
-
-    // console.log(
-    //   moment(
-    //     `${durationRemainingTime.seconds()} : ${durationRemainingTime.minutes()} : ${durationRemainingTime.hours()}`,
-    //     "hh:mm:"
-    //   ).format("hh:mm:ss")
-    // );
   };
 
   const handleCityChange = (event) => {
@@ -185,27 +179,27 @@ export default function MainContent() {
         <Prayer
           name="الفجر"
           time={setupTime(timings.Fajr)}
-          image="public/fajr.png"
+          image="https://i.imgur.com/wBGJ1L4.jpeg"
         />
         <Prayer
           name="الظهر"
           time={setupTime(timings.Dhuhr)}
-          image="public/dhuhr.png"
+          image="https://i.imgur.com/pCMPL0K.jpeg"
         />
         <Prayer
           name="العصر"
           time={setupTime(timings.Asr)}
-          image="public/asr.png"
+          image="https://i.imgur.com/x9gmdk8.jpeg"
         />
         <Prayer
           name="المغرب"
           time={setupTime(timings.Maghrib)}
-          image="public/maghrib.png"
+          image="https://i.imgur.com/1qQTkuT.jpeg"
         />
         <Prayer
           name="العشاء"
           time={setupTime(timings.Isha)}
-          image="public/isha.png"
+          image="https://i.imgur.com/8vpi6xH.jpeg"
         />
       </Stack>
       {/*== Prayers Cards ==*/}
