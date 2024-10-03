@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/AbdAllah-DraGoN/Prayers-Times",
+  "homepage": "https://AbdAllah-DraGoN.github.io/Prayers-Times",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
