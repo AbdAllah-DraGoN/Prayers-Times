@@ -185,27 +185,27 @@ export default function MainContent() {
         <Prayer
           name="الفجر"
           time={setupTime(timings.Fajr)}
-          image="src/assets/fajr.png"
+          image="public/fajr.png"
         />
         <Prayer
           name="الظهر"
           time={setupTime(timings.Dhuhr)}
-          image="src/assets/dhuhr.png"
+          image="public/dhuhr.png"
         />
         <Prayer
           name="العصر"
           time={setupTime(timings.Asr)}
-          image="src/assets/asr.png"
+          image="public/asr.png"
         />
         <Prayer
           name="المغرب"
           time={setupTime(timings.Maghrib)}
-          image="src/assets/maghrib.png"
+          image="public/maghrib.png"
         />
         <Prayer
           name="العشاء"
           time={setupTime(timings.Isha)}
-          image="src/assets/isha.png"
+          image="public/isha.png"
         />
       </Stack>
       {/*== Prayers Cards ==*/}
