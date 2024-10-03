@@ -16,7 +16,7 @@ export default function MainContent() {
   const avaliableCities = [
     {
       id: 1,
-      country: "Egypt",
+      country: "EG",
       enName: "Cairo",
       arName: "القاهرة",
     },
@@ -52,7 +52,7 @@ export default function MainContent() {
   });
   const [selectedCity, setSelectedCity] = useState({
     id: 1,
-    country: "Egypt",
+    country: "EG",
     enName: "Cairo",
     arName: "القاهرة",
   });
@@ -77,7 +77,7 @@ export default function MainContent() {
   // ======================================
   const getTimings = async () => {
     const response = await axios.get(
-      `https://api.aladhan.com/v1/timingsByCity?country=${selectedCity.country}&city=${selectedCity.city}&method=2`
+      `https://api.aladhan.com/v1/timingsByCity?country=${selectedCity.country}&city=${selectedCity.enName}&method=5`
     );
     // console.log(response);
     setTimings(response.data.data.timings);
