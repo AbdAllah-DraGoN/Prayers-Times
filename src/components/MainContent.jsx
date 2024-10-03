@@ -66,7 +66,7 @@ export default function MainContent() {
   }, [selectedCity]);
 
   useEffect(() => {
-    setToday(moment().format("MMM Do YYYY | h:mm a"));
+    setToday(moment().format("Do MMM YYYY | h:mm a"));
     let interval = setInterval(() => {
       setupCountdownTimer();
     }, 1000);
@@ -154,17 +154,19 @@ export default function MainContent() {
   return (
     <>
       {/* Top Row */}
-      <Grid container>
-        <Grid size={6}>
-          <div>
-            <h2>{today}</h2>
-            <h1>{selectedCity.arName}</h1>
+      <Grid container spacing={{ sm: 3 }}>
+        <Grid size={{ xs: 12, sm: 6 }}>
+          <div style={{ marginLeft: "3rem" }}>
+            <h2 style={{ fontSize: "1.1rem" }}>{today}</h2>
+            <h1 style={{ fontSize: "2rem" }}>{selectedCity.arName}</h1>
           </div>
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 6, sm: 6 }}>
           <div>
-            <h2>متبقى على صلاة {prayersArray[nextPrayerIndex].displayName}</h2>
-            <div style={{ fontSize: "5rem" }}>{remainingTimeCounter}</div>
+            <h2 style={{ fontSize: "1.1rem" }}>
+              متبقى على صلاة {prayersArray[nextPrayerIndex].displayName}
+            </h2>
+            <div style={{ fontSize: "3rem" }}>{remainingTimeCounter}</div>
           </div>
         </Grid>
       </Grid>
@@ -173,8 +175,11 @@ export default function MainContent() {
       {/* Prayers Cards */}
       <Stack
         direction="row"
-        justifyContent={"space-between"}
-        style={{ marginTop: "50px" }}
+        // spacing={{ xs: 1, sm: 2 }}
+        // useFlexGap
+        justifyContent={"center"}
+        sx={{ marginTop: "2rem", flexWrap: "wrap" }}
+        // style={{ marginTop: "3rem" }}
       >
         <Prayer
           name="الفجر"
@@ -208,12 +213,13 @@ export default function MainContent() {
       <Stack
         direction="row"
         justifyContent={"center"}
-        style={{ marginTop: "30px" }}
+        sx={{ marginTop: "2rem", marginBottom: "2rem" }}
       >
-        <FormControl style={{ width: "200px" }}>
+        <FormControl style={{ width: "10rem" }}>
           <InputLabel
             id="demo-simple-select-label"
             sx={{
+              fontSize: "0.9rem",
               color: "#fff", // لون العنوان في الوضع العادي
               "&.Mui-focused": {
                 color: "#fff", // لون العنوان عند التركيز (focus)
@@ -225,6 +231,9 @@ export default function MainContent() {
           <Select
             style={{ color: "#fff" }}
             sx={{
+              height: "3rem",
+              fontSize: "0.9rem",
+
               "& .MuiOutlinedInput-notchedOutline": {
                 borderColor: "#fff2", // لون الإطار في الحالة العادية
               },
