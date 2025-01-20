@@ -9,7 +9,7 @@ import Select from "@mui/material/Select";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import moment from "moment";
-import "moment/dist/locale/ar-dz";
+import "moment/dist/locale/ar-ly";
 moment.locale("ar");
 
 export default function MainContent() {
@@ -57,6 +57,8 @@ export default function MainContent() {
     arName: "القاهرة",
   });
   const [today, setToday] = useState("");
+  console.log(today);
+
   const [remainingTimeCounter, setRemainingTimeCounter] =
     useState("00 : 00 : 00");
 
