@@ -57,7 +57,7 @@ export default function MainContent() {
     arName: "القاهرة",
   });
   const [today, setToday] = useState("");
-  console.log(today);
+  // console.log(today);
 
   const [remainingTimeCounter, setRemainingTimeCounter] =
     useState("00 : 00 : 00");
